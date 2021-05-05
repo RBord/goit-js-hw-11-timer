@@ -22,6 +22,7 @@ class CountdownTimer {
             const timer = this.getTimeComponents(time);
             this.onTick(timer);
         }, 1000);
+        
     }
 
     getTimeComponents(time) {
@@ -40,7 +41,7 @@ class CountdownTimer {
 
 const countdownTimer = new CountdownTimer({
     onTick: updateClockface,
-    targetDate: new Date('Jun 06, 2021'),
+    targetDate: new Date('2021-06-05T23:00:00'),
     selector: '#timer-1',
 });
 
@@ -52,3 +53,4 @@ function updateClockface({days, hours, mins, secs}){
     refs.mins.textContent = `${mins}`;
     refs.secs.textContent = `${secs}`;
 }
+
